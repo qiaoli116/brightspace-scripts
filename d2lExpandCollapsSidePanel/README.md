@@ -26,6 +26,7 @@ This script adds a button to Brightspace content pages that allows the user to e
 **Important Note:**
 -   Since the script modifies the parent document (`parent.document`) to access the side panel element, it's crucial that the script is hosted on the same domain (origin) as the Brightspace content page. Uploading the script to Brightspace's Managed Files fulfills this requirement.
 -   **Identifying the Side Panel:** This script relies on a combination of the following class names (`d2l-box`,  `d2l-box-h`,  `d2l-twopanelselector-side`, and `d2l-twopanelselector-side-sep`) to identify the side panel element. These class names are based on an examination of the current Brightspace webpage structure. It's important to understand that these class names may change in future Brightspace updates. If the script stops working after a Brightspace update, you may need to adjust the `sidePanelQuery` variable in the script to target the updated side panel element's class names.
+-   **Security Restrictions**: Copying and pasting the code directly into the Brightspace content editor may not work. Brightspace's content editor often filters out JavaScript for security reasons. To use this script effectively, you need to upload the HTML file containing the script (d2lExpandCollapseSidePanel.html) to Brightspace's Managed Files and then embed it using an iframe as described in the instructions above.
 
 **Screenshots**
 -   File uploaded to Managed Files in a Brightspace shell.

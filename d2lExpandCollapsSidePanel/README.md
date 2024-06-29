@@ -35,8 +35,7 @@ This script adds a button to Brightspace content pages that allows the user to e
 -   The button labeled "Collapse Side Panel" with the side panel expanded.
 ![Image](https://github.com/qiaoli116/brightspace-scripts/assets/26584180/d3b9f349-0f50-4834-9216-4956ee2653a4)
 -   The button labeled "Expand Side Panel" with the side panel collapsed.
-![image](https://github.com/qiaoli116/brightspace-scripts/assets/26584180/6d9ea942-0997-4316-bb5c-9939fb76b2a4)
-
+![image](https://github.com/qiaoli116/brightspace-scripts/assets/26584180/2a0647c3-6386-4728-a01c-8fb385822da7)
 
 **Additional Notes:**
 -   You can modify the `sidePanelQuery` variable to target a different element if needed.

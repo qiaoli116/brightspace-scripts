@@ -1,0 +1,94 @@
+<!--
+To be used as
+<p style="margin: 0;"><iframe src="/content/enforced/<your-course-id>/d2lExpandCollapsSidePanel.html" style="border: none; height: 40px; width: 100%; overflow: hidden;"></iframe></p>
+-->
+
+<body style="margin: 0; padding: 0; overflow: hidden;">
+<style>
+    #expand-collapse-side-panel {
+        font-size: 0.8rem;
+        font-family: sans-serif;
+        border: none;
+        border-radius: 5px;
+        padding: 0.25rem 0.75rem;
+        box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.2), 0 1px 2px hsla(0, 0%, 0%, 0.2);
+        background-color: white;
+        line-height: 1.5;
+        margin: 2px;
+        color: #3992ff;
+        font-weight: 500;
+    }
+    #expand-collapse-side-panel:hover {
+        box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.6), 0 1px 2px hsla(0, 0%, 0%, 0.2);
+    }
+    #expand-collapse-side-panel:active {
+        box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.4);
+        transform: translateY(1px);
+    }
+</style>
+<button id="expand-collapse-side-panel" onClick="toggleSide();"></button>
+
+<script>
+    const buttonId = 'expand-collapse-side-panel';
+    const button = document.getElementById(buttonId);
+    const sidePanelQuery = '.d2l-box.d2l-box-h.d2l-twopanelselector-side.d2l-twopanelselector-side-sep';
+    const sidePanel = parent.document.querySelector(sidePanelQuery);
+
+    const buttonTextExpand = "➡️ Expand Side Panel";
+    const buttonTextCollapse = "⬅️ Collapse Side Panel";
+
+    if(sidePanel) {
+        button.style.display = '';
+        if(sidePanel.style.display === 'none') {
+            button.innerText = buttonTextExpand;
+        } else {
+            button.innerText = buttonTextCollapse;
+        }
+    } else {
+        // console.log('Side panel not found');
+        // hide the button if the side panel is not found
+        button.style.display = 'none';
+    }
+
+    function toggleSide() {
+        // function to expand the side panel
+        function expandSidePanel() {
+            if(sidePanel) {
+                sidePanel.style.display = '';
+                sidePanel.parentElement.style.backgroundColor = '';
+            } else {
+                console.log('Side panel not found');
+            }
+        }
+
+        // function to collapse the side panel
+        function collapseSidePanel() {
+            if(sidePanel) {
+                sidePanel.style.display = 'none';
+                sidePanel.parentElement.style.backgroundColor = 'white';
+            } else {
+                console.log('Side panel not found');
+            }
+        }
+
+        // toggle the side panel depending on its current display state
+        if(sidePanel) {
+            button.style.display = '';
+            if(sidePanel.style.display === 'none') {
+                expandSidePanel();
+                button.innerText = buttonTextCollapse;
+            } else {
+                collapseSidePanel();
+                button.innerText = buttonTextExpand;
+            }
+        } else {
+            // console.log('Side panel not found');
+            // hide the button
+            button.style.display = 'none';
+        }
+    }
+    
+
+</script>
+
+</body>

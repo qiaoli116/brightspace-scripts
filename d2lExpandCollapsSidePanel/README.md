@@ -35,8 +35,8 @@ This script adds a button to Brightspace content pages that allows the user to e
 
 **Screenshots**
 
--   [Screenshot 1: Script embedded in a Brightspace content page](![image](https://github.com/qiaoli116/brightspace-scripts/assets/26584180/d3b9f349-0f50-4834-9216-4956ee2653a4)
-) - This screenshot should show the button displayed next to the content area.
+-   ![Screenshot 1: Script embedded in a Brightspace content page](https://github.com/qiaoli116/brightspace-scripts/assets/26584180/d3b9f349-0f50-4834-9216-4956ee2653a4)
+-   This screenshot should show the button displayed next to the content area.
 -   [Screenshot 2: Side panel expanded](screenshot2.png) - This screenshot should show the button labeled "Collapse Side Panel" with the side panel expanded.
 -   [Screenshot 3: Side panel collapsed](screenshot3.png) - This screenshot should show the button labeled "Expand Side Panel" with the side panel collapsed.
 

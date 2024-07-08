@@ -1,0 +1,46 @@
+<!--
+To be used as below in Brightspace HTML content editor as an embedded iframe.
+<p style="margin: 0;"><iframe src="/content/enforced/<your-course-id>/d2lExpandCollapsSidePanel.html" style="border: none; height: 40px; width: 100%; overflow: hidden;"></iframe></p>
+-->
+
+<body style="margin: 0; padding: 0; overflow: hidden;">
+<style>
+    #open-link {
+        font-size: 0.8rem;
+        font-family: sans-serif;
+        border: none;
+        border-radius: 5px;
+        padding: 0.25rem 0.75rem;
+        box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.2), 0 1px 2px hsla(0, 0%, 0%, 0.2);
+        background-color: white;
+        line-height: 1.5;
+        margin: 2px;
+        color: #3992ff;
+        font-weight: 500;
+    }
+    #open-link:hover {
+        box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.6), 0 1px 2px hsla(0, 0%, 0%, 0.2);
+    }
+    #open-link:active {
+        box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.4);
+        transform: translateY(1px);
+    }
+</style>
+<button id="open-link" >open</button>
+
+<script>
+    const button = document.getElementById('open-link');
+    // url come from the iframe src attribute
+    const urlParams = new URLSearchParams(window.location.search);
+    const url = urlParams.get('url');
+    console.log(url);
+    button.addEventListener('click', function () {
+        if(url) {
+            window.open(url, '_blank');
+        }
+    });
+
+</script>
+
+</body>
+    
